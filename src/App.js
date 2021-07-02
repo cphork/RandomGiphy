@@ -1,4 +1,4 @@
-import { useEffect, useState}from 'react'
+import { useEffect, useState } from 'react'
 import Form from './components/Form'
 import GiphyDisplay from './components/GiphyDisplay'
 import './App.css';
@@ -8,13 +8,13 @@ import './App.css';
 
 function App() {
 
-  const apiKey ='f3ID9KvCWAAHMFS7UggaldoRCenoPiZN'
+  const apiKey = 'f3ID9KvCWAAHMFS7UggaldoRCenoPiZN'
 
-  const [giphys, setGiphys]=useState(null)
+  const [giphys, setGiphys] = useState(null)
 
   const getGiphys = async (searchTerm) => {
 
-      const response = await fetch(`https://api.giphy.com/v1/gifs/random?api_key=${apiKey}&rating=g`)
+    const response = await fetch(`https://api.giphy.com/v1/gifs/random?api_key=${apiKey}&rating=g`)
 
     const data = await response.json()
 
@@ -24,9 +24,9 @@ function App() {
   };
 
 
-  useEffect (() => {
+  useEffect(() => {
 
-    const gifs = ['duck', 'mustang', 'dog', 'cat',]
+    const gifs = ['duck', 'mustang', 'dog', 'cat']
 
     const index = Math.floor(Math.random() * gifs.length)
 
@@ -38,8 +38,8 @@ function App() {
   return (
     <div className="App">
 
-      <Form giphysearch ={getGiphys} />
-      <GiphyDisplay giphys={giphys}/>
+      <Form giphysearch={getGiphys} />
+      <GiphyDisplay giphys={giphys} />
 
     </div>
   );

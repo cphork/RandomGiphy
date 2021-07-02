@@ -11,3 +11,25 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.ran-img {
+  height: 250px;
+  width: 300px;
+  margin-top: 30px;
+  border: 2px dashed black;
+}
+
+.header {
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  margin-top: 50px;
+}
+
+.rando-btn {
+  background:black;
+  color: white;
+  font-family: monospace;
+}
+
+html {
+  background: burlywood;
+}
